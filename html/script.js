@@ -16,7 +16,7 @@ $(function(){
         }
 
         if(event.data.action == 'updateValues'){
-            if(event.data.isPluginActive){
+            if(event.data.isPluginActiveStatus){
                 labelPlugin.innerHTML = "CONNECTED";
                 labelPlugin.style.color = colorStatusOk;
             } else{
@@ -24,7 +24,7 @@ $(function(){
                 labelPlugin.style.color = colorStatusBad;
             }
 
-            if(event.data.isMicActive){
+            if(event.data.isMicActiveStatus){
                 labelMic.innerHTML = "ACTIVE";
                 labelMic.style.color = colorStatusOk;
             } else{
