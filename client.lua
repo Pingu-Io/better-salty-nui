@@ -39,14 +39,14 @@ Citizen.CreateThread(function()
                 value = true
             })
 
-            DisableAllControlActions(0)
+            EnableAllControlActions(0)
         elseif(not isPluginActive or not isMicActive) then
             SendNUIMessage({
                 action = "setWindow",
                 value = false
             })
 
-            EnableAllControlActions(0)
+            DisableAllControlActions(0)
         end
     end
 end)
