@@ -1,6 +1,6 @@
-isPluginActive = false
-isMicActive = false
-isMicEnabled = false
+isPluginActive = nil
+isMicActive = nil
+isMicEnabled = nil
 
 -- Event that check the status of the ts3 plugin
 AddEventHandler('SaltyChat_PluginStateChanged', function(pluginState)
@@ -12,7 +12,8 @@ AddEventHandler('SaltyChat_PluginStateChanged', function(pluginState)
 
     SendNUIMessage({
         action = "updateValues",
-        isPluginActiveStatus = isPluginActive
+        statusType = "isPluginActiveStatus",
+        value = isPluginActive
     })
 end)
 
@@ -26,7 +27,8 @@ AddEventHandler('SaltyChat_MicStateChanged', function(isMicrophoneMuted)
 
     SendNUIMessage({
         action = "updateValues",
-        isMicActiveStatus = isMicActive
+        statusType = "isMicActiveStatus",
+        value = isMicActive
     })
 end)
 
@@ -40,7 +42,8 @@ AddEventHandler('SaltyChat_MicEnabledChanged', function(isMicrophoneEnabled)
 
     SendNUIMessage({
         action = "updateValues",
-        isMicEnabledStatus = isMicEnabled
+        statusType = "isMicEnabledStatus",
+        value = isMicEnabled
     })
 end)
 
