@@ -24,6 +24,14 @@ $(function(){
                 labelPlugin.style.color = colorStatusBad;
             }
 
+            if(event.data.isMicEnabledStatus){
+                labelTs3.innerHTML = "CONNECTED";
+                labelTs3.style.color = colorStatusOk;
+            } else{
+                labelTs3.innerHTML = "NOT CONNECTED";
+                labelTs3.style.color = colorStatusBad;
+            }
+
             if(event.data.isMicActiveStatus){
                 labelMic.innerHTML = "ACTIVE";
                 labelMic.style.color = colorStatusOk;
