@@ -16,28 +16,30 @@ $(function(){
         }
 
         if(event.data.action == 'updateValues'){
-            if(event.data.isPluginActiveStatus){
-                labelPlugin.innerHTML = "CONNECTED";
-                labelPlugin.style.color = colorStatusOk;
-            } else{
-                labelPlugin.innerHTML = "NOT CONNECTED";
-                labelPlugin.style.color = colorStatusBad;
-            }
-
-            if(event.data.isMicEnabledStatus){
-                labelTs3.innerHTML = "CONNECTED";
-                labelTs3.style.color = colorStatusOk;
-            } else{
-                labelTs3.innerHTML = "NOT CONNECTED";
-                labelTs3.style.color = colorStatusBad;
-            }
-
-            if(event.data.isMicActiveStatus){
-                labelMic.innerHTML = "ACTIVE";
-                labelMic.style.color = colorStatusOk;
-            } else{
-                labelMic.innerHTML = "NOT ACTIVE";
-                labelMic.style.color = colorStatusBad;
+            if(event.data.statusType == "isPluginActiveStatus"){
+                if(event.data.value){
+                    labelPlugin.innerHTML = "CONNECTED";
+                    labelPlugin.style.color = colorStatusOk;
+                } else{
+                    labelPlugin.innerHTML = "NOT CONNECTED";
+                    labelPlugin.style.color = colorStatusBad;
+                }
+            } else if(event.data.statusType == "isMicEnabledStatus"){
+                if(event.data.value){
+                    labelTs3.innerHTML = "CONNECTED";
+                    labelTs3.style.color = colorStatusOk;
+                } else{
+                    labelTs3.innerHTML = "NOT CONNECTED";
+                    labelTs3.style.color = colorStatusBad;
+                }
+            } else if(event.data.statusType == "isMicActiveStatus"){
+                if(event.data.value){
+                    labelMic.innerHTML = "ACTIVE";
+                    labelMic.style.color = colorStatusOk;
+                } else{
+                    labelMic.innerHTML = "NOT ACTIVE";
+                    labelMic.style.color = colorStatusBad;
+                }
             }
         }
     });
