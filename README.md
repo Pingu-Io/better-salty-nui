@@ -14,10 +14,10 @@ Inspired by TokoVoip and EgoPVP's SaltyNUI.
 - Add "ensure BetterSaltyNUI" to your server.cfg and make sure the NUI is started AFTER SaltyChat
 
 ## Features
-- Full customizable text/esthetics
-- Display the status of the plugin
-- Display if the player is connected to the TeamSpeak3 server
-- Display if the player is microphone/sound muted
+- Full customizable text/esthetics (HTML & CSS)
+- Display the status of the plugin (Toggles when player switch between gaming channel and lobby channel)
+- Display if the player is connected to the TeamSpeak3 server (Toggles when the player microphone switch between active or not active)
+- Display if the player is microphone/sound muted (Toggles when player microphone/speakers switch between enabled or not enabled)
 - Block player movements
 
 ## Basic Example
