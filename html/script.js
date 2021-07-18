@@ -1,6 +1,5 @@
 $(function(){
     labelPlugin = document.getElementById("pluginStatus");
-    labelTs3 = document.getElementById("Ts3State");
     labelMic = document.getElementById("microfono");
 
     colorStatusOk = "#00ff00";
@@ -23,14 +22,6 @@ $(function(){
                 } else{
                     labelPlugin.innerHTML = "NOT CONNECTED";
                     labelPlugin.style.color = colorStatusBad;
-                }
-            } else if(event.data.statusType == "isMicEnabledStatus"){
-                if(event.data.value){
-                    labelTs3.innerHTML = "CONNECTED";
-                    labelTs3.style.color = colorStatusOk;
-                } else{
-                    labelTs3.innerHTML = "NOT CONNECTED";
-                    labelTs3.style.color = colorStatusBad;
                 }
             } else if(event.data.statusType == "isMicActiveStatus"){
                 if(event.data.value){
