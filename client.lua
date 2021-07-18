@@ -1,6 +1,5 @@
 isPluginActive = nil
 isMicActive = nil
-isMicEnabled = nil
 
 -- Event that check the status of the ts3 plugin
 AddEventHandler('SaltyChat_PluginStateChanged', function(pluginState)
@@ -32,33 +31,18 @@ AddEventHandler('SaltyChat_MicStateChanged', function(isMicrophoneMuted)
     })
 end)
 
--- Event that check if a player microphone is enabled or not
-AddEventHandler('SaltyChat_MicEnabledChanged', function(isMicrophoneEnabled)
-    if(isMicrophoneEnabled) then
-        isMicEnabled = true
-    else
-        isMicEnabled = false
-    end
-
-    SendNUIMessage({
-        action = "updateValues",
-        statusType = "isMicEnabledStatus",
-        value = isMicEnabled
-    })
-end)
-
 Citizen.CreateThread(function()
     while true do
         Citizen.Wait(0)
 
-        if(isPluginActive and isMicActive and isMicEnabled) then
+        if(isPluginActive and isMicActive) then
             SendNUIMessage({
                 action = "setWindow",
                 value = false
             })
 
             EnableAllControlActions(0)
-        elseif(not isPluginActive or not isMicActive or not isMicEnabled) then
+        elseif(not isPluginActive or not isMicActive) then
             SendNUIMessage({
                 action = "setWindow",
                 value = true
