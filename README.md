@@ -16,7 +16,6 @@ Inspired by TokoVoip and EgoPVP's SaltyNUI.
 ## Features
 - Full customizable text/esthetics (HTML & CSS)
 - Display the status of the plugin (Toggles when player switch between gaming channel and lobby channel)
-- Display if the player is connected to the TeamSpeak3 server (Toggles when the player microphone switch between active or not active)
 - Display if the player is microphone/sound muted (Toggles when player microphone/speakers switch between enabled or not enabled)
 - Block player movements
 
