@@ -1,5 +1,5 @@
 # BetterSaltyNUI
-[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://paypal.me/pinguio)
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)]([https://paypal.me/pinguio](https://paypal.me/martinrossetto))
 
 Stop players who are not using SaltyChat from playing!
 
